@@ -18,7 +18,7 @@ Run the following commands and the application will start automatically
 5.    grunt serve
 
 # Features
-### Store Front features
+### Ecommerce Front End features
 *  Single page web app (SPA) created using AngularJS, NodeJS, Express, MongoDB (MEAN)
 *  Fastest shop experience
 *  Fast Product Search, Filter with AJAX
@@ -32,7 +32,7 @@ Run the following commands and the application will start automatically
 *  Instant updates for any changes made across all clients with SocketIO implementation
 *  Loads more products on scroll (No paging required)
 
-### Store Back Office
+### Application Admin Features
 *  Products, Categories, Brand, Order Management from admin panel with easy directives
 *  Manage Order and Change Status from admin panel
 *  Facility for Multiple product variants (size, color, price, image)

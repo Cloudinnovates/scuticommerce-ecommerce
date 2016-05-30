@@ -43,19 +43,19 @@ Run the following commands and the application will start automatically
 
 
 
-/Users/kapilkataria/scuti_products/mongodb/bin/mongoexport --db shopnx-dev --collection products --out products.json
-/Users/kapilkataria/scuti_products/mongodb/bin/mongoexport --db shopnx-dev --collection categories --out categories.json
-/Users/kapilkataria/scuti_products/mongodb/bin/mongoexport --db shopnx-dev --collection brands --out brands.json
-/Users/kapilkataria/scuti_products/mongodb/bin/mongoexport --db shopnx-dev --collection orders --out orders.json
+/Users/kapilkataria/scuti_products/mongodb/bin/mongoexport --db scuti-dev --collection products --out products.json
+/Users/kapilkataria/scuti_products/mongodb/bin/mongoexport --db scuti-dev --collection categories --out categories.json
+/Users/kapilkataria/scuti_products/mongodb/bin/mongoexport --db scuti-dev --collection brands --out brands.json
+/Users/kapilkataria/scuti_products/mongodb/bin/mongoexport --db scuti-dev --collection orders --out orders.json
 
 
-/Users/kapilkataria/scuti_products/mongodb/bin/mongoimport --db shopnx-dev --collection products --file /Users/kapilkataria/scuti_products/scuticommerce-ecommerce/sample_data/products.json
-/Users/kapilkataria/scuti_products/mongodb/bin/mongoimport --db shopnx-dev --collection categories --file /Users/kapilkataria/scuti_products/scuticommerce-ecommerce/sample_data/categories.json
-/Users/kapilkataria/scuti_products/mongodb/bin/mongoimport --db shopnx-dev --collection brands --file /Users/kapilkataria/scuti_products/scuticommerce-ecommerce/sample_data/brands.json
-/Users/kapilkataria/scuti_products/mongodb/bin/mongoimport --db shopnx-dev --collection orders --file /Users/kapilkataria/scuti_products/scuticommerce-ecommerce/sample_data/orders.json
+/Users/kapilkataria/scuti_products/mongodb/bin/mongoimport --db scuti-dev --collection products --file /Users/kapilkataria/scuti_products/scuticommerce-ecommerce/sample_data/products.json
+/Users/kapilkataria/scuti_products/mongodb/bin/mongoimport --db scuti-dev --collection categories --file /Users/kapilkataria/scuti_products/scuticommerce-ecommerce/sample_data/categories.json
+/Users/kapilkataria/scuti_products/mongodb/bin/mongoimport --db scuti-dev --collection brands --file /Users/kapilkataria/scuti_products/scuticommerce-ecommerce/sample_data/brands.json
+/Users/kapilkataria/scuti_products/mongodb/bin/mongoimport --db scuti-dev --collection orders --file /Users/kapilkataria/scuti_products/scuticommerce-ecommerce/sample_data/orders.json
 
-db.brands.find().forEach(function(d){ db.getSiblingDB('shopnx')['brands'].insert(d); });
-db.categories.find().forEach(function(d){ db.getSiblingDB('shopnx')['categories'].insert(d); });
-db.products.find().forEach(function(d){ db.getSiblingDB('shopnx')['products'].insert(d); });
-db.orders.find().forEach(function(d){ db.getSiblingDB('shopnx')['orders'].insert(d); });
+db.brands.find().forEach(function(d){ db.getSiblingDB('scuti')['brands'].insert(d); });
+db.categories.find().forEach(function(d){ db.getSiblingDB('scuti')['categories'].insert(d); });
+db.products.find().forEach(function(d){ db.getSiblingDB('scuti')['products'].insert(d); });
+db.orders.find().forEach(function(d){ db.getSiblingDB('scuti')['orders'].insert(d); });
 # scuticommerce-ecommerce
